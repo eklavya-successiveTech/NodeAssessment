@@ -18,7 +18,6 @@ export const register = async(req: Request, res: Response, next: NextFunction)=>
             password: hashPassword,
         });
 
-        (await newUser).save()
     }
     catch(err){
         next(err);
